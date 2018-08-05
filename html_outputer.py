@@ -20,7 +20,6 @@ class HtmlOutputer(object):
 
         for data in self.datas:
             fout.write("<tr>")
-            # fout.write("<td>%s</td>" % data['url'])
             fout.write("<td>%s</td>" % data['title'])
             fout.write("<td>%s</td>" % data['summary'])
             fout.write("</tr>")
@@ -30,19 +29,21 @@ class HtmlOutputer(object):
         fout.write("</html>")
         fout.close()
 
+    # 爬取的记录插入到mysql中
     def output_mysql(self):
-        #2.插入操作
         db= pymysql.connect(host="localhost",user="root",
                             password="root",db="lucene",port=3306)
 
         # 使用cursor()方法获取操作游标
         cur = db.cursor()
         sql = 'insert into baike (title, summary) values '
+        #拼接sql，批量插入，提高访问数据库效率
         for data in self.datas:
-            # 用空字符替换字符串里面的双引号
+            # 用空字符替换字符串里面的双引号，解决拼接插入sql语句“出错的问题
             title=re.sub('"','',data['title'])
             summary=re.sub('"','',data['summary'])
             sql += ' ("'+title+'", "'+summary+'"),'
+        #去除sql尾部的,
         sql = sql[:-1]
         print(sql)
         nowTime=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')

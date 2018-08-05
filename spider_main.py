@@ -33,6 +33,7 @@ class SpiderMain(object):
 
 
 if __name__ == '__main__':
+    #爬虫入口:百度百科的高铁词条
     root_url = "https://baike.baidu.com/item/%E9%AB%98%E9%93%81"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)

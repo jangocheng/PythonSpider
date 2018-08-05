@@ -16,14 +16,7 @@ class HtmlParser(object):
 
     def _get_new_data(self, page_url, soup):
         res_data = {}
-        # url
         # res_data['url'] = page_url
-
-        # title_node = soup.find('dd', class_="lemmaWgt-lemmaTitle-title").find('h1')
-        # res_data['title'] = title_node.get_text()
-
-        # <dd class="lemmaWgt-lemmaTitle-title">
-        # <h1>中国矿业大学</h1>
         title_node = soup.find('dd',class_="lemmaWgt-lemmaTitle-title").find('h1')
         res_data['title'] = title_node.get_text()
 

@@ -21,7 +21,7 @@ db= pymysql.connect(host="localhost",user="root",
 
 # 使用cursor()方法获取操作游标
 cur = db.cursor()
-sql = 'insert into java (job,company,area,money,low,hign) values '
+sql = 'insert into 51java (job,company,area,money,low,hign) values '
 #多页处理，保存到数据库
 for  j in range(1,40):
     print("正在爬取第"+str(j)+"页数据...")

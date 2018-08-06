@@ -5,7 +5,7 @@
 - IDE:Intellij IDEA
 - 数据库:MySQL 
 (保存百度百科数据的数据库结构代码[baike.sql](https://github.com/suxiongwei/PythonSpider/blob/master/baike.sql))
-(保存51job数据的数据库结构代码[baike.sql](https://github.com/suxiongwei/PythonSpider/blob/master/java.sql))
+(保存51job数据的数据库结构代码[51java.sql](https://github.com/suxiongwei/PythonSpider/blob/master/51java.sql))
 - 代码管理:Git
 
 ## 模块介绍

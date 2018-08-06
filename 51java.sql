@@ -10,16 +10,16 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2018-08-06 09:11:57
+Date: 2018-08-06 11:12:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for java
+-- Table structure for 51java
 -- ----------------------------
-DROP TABLE IF EXISTS `java`;
-CREATE TABLE `java` (
+DROP TABLE IF EXISTS `51java`;
+CREATE TABLE `51java` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `job` varchar(255) DEFAULT NULL,
   `company` varchar(255) DEFAULT NULL,
@@ -28,4 +28,4 @@ CREATE TABLE `java` (
   `low` int(8) DEFAULT NULL,
   `hign` int(8) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1934 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2032 DEFAULT CHARSET=utf8;

@@ -15,7 +15,7 @@
 - html_outputer:输出爬取数据
 ## 演示步骤
 - 爬取百度百科数据:运行spider_main.py
-- 51job北京java岗位的招聘信息:运行51job.py
+- 爬取51job北京java岗位的招聘信息数据:运行51job.py
 ```sql
     SELECT
     	max(hign) AS 最高工资,
